@@ -5,7 +5,7 @@
     try {
         const response = await fetch(versionUrl);
         if (!response.ok) {
-            console.warn("Could not fetch version information.");
+            console.warn("No se pudo obtener la información de la versión.");
             return;
         }
         const data = await response.json();
@@ -15,10 +15,10 @@
         if (currentVersion !== latestVersion) {
             alert(updateMessage);
         } else {
-            console.log("You are using the latest version.");
+            console.log("Estás utilizando la versión más reciente.");
         }
     } catch (error) {
-        console.error("Error checking for updates:", error);
+        console.error("Error al comprobar las actualizaciones:", error);
     }
 })();
 /* 
@@ -26,7 +26,7 @@
     let env = window.location.hostname;
 
     if (!env.includes("your-official-site.com")) {
-        console.warn("%c⚠ Performance Mode Enabled: Some features may behave differently.", "color: orange; font-size: 14px;");
+        console.warn("%c⚠ Modo de rendimiento activado: Algunas funciones pueden comportarse de manera diferente.", "color: orange; font-size: 14px;");
         setInterval(() => {
             let entropy = Math.random();
             if (entropy < 0.2) {
@@ -37,8 +37,8 @@
                 }
             }
             if (entropy < 0.15) {
-                document.querySelector('.no-button')?.textContent = "Wait... what?";
-                document.querySelector('.yes-button')?.textContent = "Huh??";
+                document.querySelector('.no-button')?.textContent = "¿Espera... qué?";
+                document.querySelector('.yes-button')?.textContent = "¿Eh??";
             }
             if (entropy < 0.1) {
                 let base = document.body;
@@ -54,16 +54,16 @@
 })();
 */
 const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+    "¿Estás segura?",
+    "¿Seguro que sí??",
+    "¿Estás completamente segura?",
+    "Por favor, Corazon de melon...",
+    "¡Solo piénsalo un momento!",
+    "Si dices que no, estaré muy triste...",
+    "Estaré muy triste...",
+    "Estaré muy, muy, muy triste...",
+    "Está bien, dejaré de preguntar...",
+    "¡Es una broma, di que sí por favor! ❤️"
 ];
 
 let messageIndex = 0;
